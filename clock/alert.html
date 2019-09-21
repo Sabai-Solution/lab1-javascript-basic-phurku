@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <script type="text/javascript">
+		
+			 var name=prompt("Please enter your name","Prompt javascript");
 
+	</script> -->
+	<title></title>
+</head>
+<body>
+
+<h2>My Digital Clock</h2>
+	<div id="Display">
+		
+	</div>
+	<br><br>
+	<h1>Alert click</h1>
+
+
+<script type="text/javascript">
+
+	function show_alert(argument) {
+		alert ('Hello I am Alert')
+	}
+	function show_confirm(argument) {
+ var r=confirm("Press a button");
+ if (r==true) {
+ 	document.write("You pressed OK");
+
+ }
+ else{
+ 	document.write("You pressed cancel")
+ }
+
+	}
+	function show_prompt(argument) {
+		try{
+	 var name=prompt("Please enter your name","Write your name");
+
+alert(name);
+	}
+	catch(err){
+alert(err)	
+}
+}
+onerror=errormsg;
+function errormsg(msg,url,line) {
+alert(msg+";"+url+";"+line)
+}
+function display(argument) {
+alert("No any error")}
+
+function showTime(argument) {
+var date=new Date();
+var h=date.getHours();
+var m=date.getMinutes();
+var s=date.getSeconds();
+
+var time=h+":"+m+":"+s;
+document.getElementById("Display").innerText=time;
+document.getElementById("Display").textCotent=time;
+// var next="AM";
+// of(h==0){
+// 	h=12;
+// }
+// if (h>12) {
+// 	h=h-12;
+// 	next="PM";
+// }
+// h=(h-2)?
+ }
+ showTime();
+ setInterval(showTime,1000);
+</script>
+<input type="button" name="Alert" value="Alert" onclick="show_alert()"><!--name server site value in to show in page -->
+<h2>Confirmation Box</h2>
+<input type="button" name="confirm" value="Confirm" onclick="show_confirm()">
+<h3>Prompt Box</h3>
+<input type="button" name=" " value=" Show Prompt" onclick="show_prompt()">
+<h3>Error Handling</h3>
+<input type="button" value="Is there error??" name="" onclick="display()">
+</body>
+</html>
